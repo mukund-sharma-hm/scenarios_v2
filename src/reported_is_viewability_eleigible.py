@@ -1,5 +1,6 @@
-import pandas as pd
 import os
+
+import pandas as pd
 
 conditions = [
     lambda param: param['max_continuous_inview_0_pct_time_ms'] >= param['max_continuous_inview_50_pct_time_ms'],
@@ -23,9 +24,3 @@ def check_conditions(metrics):
     return all(condition(metrics) for condition in conditions)
 
 
-def read_from_excel(filepath):
-    scenarios_df = pd.read_excel(filepath)
-    print(scenarios_df)
-
-
-read_from_excel('test_data/scenarios.xlsx')
