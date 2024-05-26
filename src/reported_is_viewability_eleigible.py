@@ -28,8 +28,4 @@ def read_from_excel(filepath):
     print(scenarios_df)
 
 
-script_dir = os.path.dirname(__file__)
-file_path = os.path.join(script_dir, 'test_data/scenarios.xlsx')
-read_from_excel(file_path)
-
-
+read_from_excel('test_data/scenarios.xlsx')
